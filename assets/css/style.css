@@ -1,0 +1,18 @@
+body {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /* padding-top: 120px; */
+    width: 100%;
+}
+
+.navbar {
+    background-color: #02445a;  
+    color: #b6d7e2;  
+    border-bottom: solid;
+    width: 100%;
+}
+
+.navbar-title{
+    margin: 0 auto;
+}
