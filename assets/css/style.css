@@ -18,6 +18,9 @@ body {
 .btn {
     background-color: white;
     position: relative; 
-    display:
+}
+
+#searchCity {
+    text-align: left;
 }
 
