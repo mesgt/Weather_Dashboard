@@ -19,7 +19,7 @@
         </div>
     </nav>
     <main class="container">
-        <div id="searchCity">
+        <div id="searchCity" class="col-md-3">
             <label for="city-input">Search for a City:</label>
             <div id="buttons-search"></div>
             <form id="city-form">
@@ -28,13 +28,16 @@
                 <button id="submitCity" type="submit" class="btn btn-outline-primary">Search</button>
             </form>
         </div>
-
         <ul id="cityHistory" class="list-unstyled">
         </ul>
         </div>
+        <div class="col-md-9">
+            <h2 id="currentCity"></h2>
+            <ul id="citySpecifics"></ul>
+        </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" src="assets/images/weather_dashboard.jpg" ></script>
 </body>
 
 </html>
