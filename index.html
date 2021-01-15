@@ -20,37 +20,21 @@
     </nav>
     <main class="container">
         <div id="searchCity">
-            <h3>Search for a City:</h3>
+            <label for="city-input">Search for a City:</label>
+            <div id="buttons-search"></div>
+            <form id="city-form">
+                <input type="text" id="city-input" placeholder="Enter city name" aria-label="Search"
+                aria-describedby="search-addon" /><br>
+                <button id="submitCity" type="submit" class="btn btn-outline-primary">Search</button>
+            </form>
         </div>
-        <div class="input-group d-flex">
-            <section class="citySearch">
-                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                    aria-describedby="search-addon" />
-            </section>
-            <button type="button" class="btn btn-outline-primary">Search</button>
-        </div>
-        <div>
-            <ul class="list-unstyled searchCity">
-                <li class="mb-1">
-                    <button class="btn rounded">Austin</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">Chicago</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">New York</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">Orlando</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">San Francisco</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">Seattle</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">Denver</button> </li>
-                <li class="mb-1"></li>
-                    <button class="btn rounded">Atlanta</button> </li>
-                    </ul>
+
+        <ul id="cityHistory" class="list-unstyled">
+        </ul>
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
