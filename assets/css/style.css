@@ -11,8 +11,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding-top: 120px;
-    width: 100%;
-    text-align: left;
+    /* width: 100%; */
+    /* text-align: center; */
 }
 
 .btn {
@@ -20,11 +20,8 @@ body {
     position: relative; 
 }
 
-#searchCity {
+#searchForCity {
     text-align: left;
 }
 
-.col-md-9 {
-    text-align: right;
-}
 

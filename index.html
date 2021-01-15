@@ -19,28 +19,40 @@
         </div>
     </nav>
     <main class="container">
-        <div id="searchCity" class="col-md-3">
-            <label for="city-input">Search for a City:</label>
-            <div id="buttons-search"></div>
-            <form id="city-form">
-                <input type="text" id="city-input" placeholder="Enter city name" aria-label="Search"
-                aria-describedby="search-addon" /><br>
-                <button id="submitCity" type="submit" class="btn btn-outline-primary">Search</button>
-            </form>
-        </div>
-        <ul id="cityHistory" class="list-unstyled">
-        </ul>
-        </div>
-        <div class="col-md-9">
-            <h2 id="currentCity"></h2>
-            <ul id="cityTemp"></ul>
-            <ul id="cityHumidity"></ul>
-            <ul id="cityWind"></ul>
-            <ul id="cityUV"></ul>
-        </div>
+        <div class='row'>
+            <div class='col-md-3'>
+                <div class='card search-section'>
+                    <div class='card-body'>
+                        <label id="searchForCity">Search for a City:</label>
+                        <div class="input-group mb-5">
+                            <input type="text" id="city-input" placeholder="Enter city name" aria-label="Search" aria-describedby="search-addon" /><br>
+                                <div class="input-group-append"></div>
+                                    <button id="submitCity" type="submit" class="btn btn-outline-primary">Search</button>
+                            </div>
+                            <div class="container">
+                                <ul id="cityHistory" class="list-unstyled"> </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-9 '>
+                    <div class='row'>
+                        <div class='card'>
+                            <div class='card-body'>
+                                <ul class="list-unstyled">
+                                    <h2 id="currentCity"></h2>
+                                    <li id="cityTemp"></li>
+                                    <li id="cityHumidity"></li>
+                                    <li id="cityWind"></li>
+                                    <li id="cityUV"></li> </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/script.js" src="assets/images/weather_dashboard.jpg" ></script>
+    <script src="./assets/js/script.js" src="assets/images/weather_dashboard.jpg"></script>
 </body>
 
 </html>
