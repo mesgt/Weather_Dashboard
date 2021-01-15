@@ -19,19 +19,20 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response);
+            console.log(city);
+            $("#currentCity").text(response.name);
 
-            var cityTemp= (((response.main.temp)-273.15)*(9/5)+32).toFixed(1);
-            var cityHumidity= response.main.humidity.toFixed(1);
-            var cityWindSpeed= response.wind.speed.toFixed(1);
+            var cityTemp= (((response.main.temp)-273.15)*(9/5)+32).toFixed(1); //showing stats for the first city searched
+            $("#cityTemp").text("Temperature: " + cityTemp + " *F");
+            console.log(cityTemp);
 
-            // console.log(cityTemp);
-            // console.log(cityHumidity);
-            // console.log(cityWindSpeed);
+            var cityHumidity= response.main.humidity.toFixed(1);//showing stats for the first city searched
+            $("#cityHumidity").text("Humidity: " + cityHumidity + "%");
+            console.log(cityHumidity);
 
-            $("#currentCity").text(city);
-            $("#cityTemp").text("Temperature: " +cityTemp +" *F");
-            $("#cityHumidity").text("Humidity: " +cityHumidity +"%");
-            $("#cityWind").text("Wind Speed: " +cityWindSpeed +" MPH");
+            var cityWindSpeed= response.wind.speed.toFixed(1);//showing stats for the first city searched
+            $("#cityWind").text("Wind Speed: " + cityWindSpeed + " MPH");
+            console.log(cityWindSpeed);
         });
     }
     function renderButtons() {
@@ -49,24 +50,18 @@ $(document).ready(function () {
                 url: fiveDayURL,
                 method: "GET"
             }).then(function (fiveDay) {
-                console.log(fiveDay);
+                // console.log(fiveDay);
                 // var temp = fiveDay;
                 // console.log(temp);
             });
 
-
             cityButton.on("click", function(){
                 displayCityInfo($(this).text());
                 // console.log($(this).text()); //.text is a jQuery. this is a javascript concept so we had to wrap it inside jQuery.
-            })
+            });
             a.append(cityButton)
             $("#cityHistory").prepend(a);
-        }
-    }
+        };
+    };
     renderButtons();
-
-
-
-
-
-})
+});
