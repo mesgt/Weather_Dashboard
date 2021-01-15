@@ -1,11 +1,8 @@
 $(document).ready(function () {
     var cities = JSON.parse(localStorage.getItem("cities")) || []
-    
-    var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=189f9bd2ae9fd98a8c9c5146ac5556b0`;
-    var fiveDayURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cities}&appid=189f9bd2ae9fd98a8c9c5146ac5556b0`;
-
     $("#submitCity").on("click", function(event) {
         event.preventDefault();
+
         var newCity = $("#city-input").val().trim();
         cities.push(newCity);
         localStorage.setItem("cities", JSON.stringify(cities));
@@ -15,12 +12,26 @@ $(document).ready(function () {
     
     function displayCityInfo(city) {
         console.log(city);
+        var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=189f9bd2ae9fd98a8c9c5146ac5556b0`;
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
             console.log(response);
+
+            var cityTemp= (((response.main.temp)-273.15)*(9/5)+32).toFixed(1);
+            var cityHumidity= response.main.humidity.toFixed(1);
+            var cityWindSpeed= response.wind.speed.toFixed(1);
+
+            // console.log(cityTemp);
+            // console.log(cityHumidity);
+            // console.log(cityWindSpeed);
+
+            $("#currentCity").text(city);
+            $("#cityTemp").text("Temperature: " +cityTemp +" *F");
+            $("#cityHumidity").text("Humidity: " +cityHumidity +"%");
+            $("#cityWind").text("Wind Speed: " +cityWindSpeed +" MPH");
         });
     }
     function renderButtons() {
@@ -32,14 +43,15 @@ $(document).ready(function () {
             cityButton.addClass("btn rounded");
             cityButton.text(cities[i]);
             
+            var fiveDayURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cities}&appid=189f9bd2ae9fd98a8c9c5146ac5556b0`;
             
             $.ajax({
                 url: fiveDayURL,
                 method: "GET"
             }).then(function (fiveDay) {
                 console.log(fiveDay);
-                var temp = fiveDay;
-                console.log(temp);
+                // var temp = fiveDay;
+                // console.log(temp);
             });
 
 
