@@ -38,10 +38,10 @@ $(document).ready(function () {
     function renderButtons() {
         $("#cityHistory").empty();
         for (var i = 0; i < cities.length; i++) {
-            var a = $("<li>");
+            var a = $("<p>");
             a.addClass("city");
             var cityButton= $("<button>");
-            cityButton.addClass("btn rounded");
+            // cityButton.addClass("btn rounded");
             cityButton.text(cities[i]);
             
             var fiveDayURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cities}&appid=189f9bd2ae9fd98a8c9c5146ac5556b0`;
