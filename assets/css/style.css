@@ -1,8 +1,53 @@
-.navbar {
-    background-color: #09a4d8;  
-    color: #edf0f1;  
-    border-bottom: solid;
+html {
+    font-size: 1rem;
+}
+
+@media (min-width: 280px) {
+    html {
+        font-size: 1rem;
+    }
+    #siteHeading {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 520px) {
+    html {
+        font-size: 1rem;
+    }
+    #siteHeading {
+        font-size: 2.1rem;
+    }
+}
+
+@media (min-width: 620px) {
+    html {
+        font-size: 1.4rem;
+    }
+    #siteHeading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 1.6rem;
+    }
+    #siteHeading {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+#headingContainer {
     width: 100%;
+    position:fixed;
+    top: 0;
+    background-color: #09a4d8;  
+    color: #edf0f1; 
     text-align: center;
 }
 
@@ -10,18 +55,22 @@ body {
     background-color: beige;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    padding-top: 120px;
-    /* width: 100%; */
-    /* text-align: center; */
+    padding-top: 80px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .btn {
     background-color: white;
-    position: relative; 
+    align-items: left; 
+}
+
+.city {
+    text-align: left;
 }
 
 #searchForCity {
     text-align: left;
-}
-
+} 
 

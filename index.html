@@ -4,50 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <nav class="navbar fixed-top">
-        <div class="header-text">
-            <h1 id="navbar-title" style="font-display: center;">Weather Dashboard</h1>
+    <div class="container-fluid fixed-top" id="headingContainer">
+        <h1 id="siteHeading" class="header">Welcome to Your Wheather Dashboard</h1>
+    </div>
+    <div class="bg-green container rounded">
+        <div class="row my-4">
+            <div class="col-md-6 col-lg-6" style="background-color:rgb(173, 173, 238)"> 
+
+
+                    <h5 id="searchForCity">Search for a City:</h5>
+                    <div class="input-group md-5">
+                        <input type="text" class="rounded" id="city-input" placeholder="Enter city name" aria-label="Search" aria-describedby="search-addon" /><br>
+                            <!-- <div class="input-group-append">
+                            </div> -->
+                                <button id="submitCity" type="submit" class="btn btn-outline-primary rounded">Search</button>
+                    </div>
+                        <div id="cityHistory" class="container-fluid">
+                            <!-- <ul id="cityHistory" class="list-unstyled"> </ul> -->
+                        </div>
+
+
+                                <div class="row pt-5 pt-xl-6">
+                </div>                         
+            </div>
+            <div class="col-md-6 py-3" style="background-color: lightgray;">
+                <img src="http://pinegrow.com/placeholders/img10.jpg" class="img-fluid rounded d-none d-block"> 
+                <div class="card">
+                    <div class="container-fluid">
+                        <div id="currentDispay">
+                        <ul class="list-unstyled">
+                            <h2 id="currentCity"></h2>
+                            <li id="cityTemp"></li>
+                            <li id="cityHumidity"></li>
+                            <li id="cityWind"></li>
+                            <li id="cityUV"></li> </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
-    <main class="container">
-        <div class='row'>
-            <div class='col-md-3'>
-                <div class='card search-section'>
-                    <div class='card-body'>
+    </div>
+
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="colDiv col-sm-12 col-md-5 col-lg-4">
+                <div class="card search-section">
+                    <div class="card-body">
                         <label id="searchForCity">Search for a City:</label>
-                        <div class="input-group mb-5">
+                        <div class="input-group md-5">
                             <input type="text" id="city-input" placeholder="Enter city name" aria-label="Search" aria-describedby="search-addon" /><br>
-                                <div class="input-group-append"></div>
+                                <div class="input-group-append">
+                                </div>
                                     <button id="submitCity" type="submit" class="btn btn-outline-primary">Search</button>
-                            </div>
-                            <div class="container">
+                        </div>
+                            <div class="container-fluid">
                                 <ul id="cityHistory" class="list-unstyled"> </ul>
                             </div>
-                        </div>
                     </div>
                 </div>
-                <div class='col-md-9 '>
-                    <div class='row'>
-                        <div class='card'>
-                            <div class='card-body'>
-                                <ul class="list-unstyled">
-                                    <h2 id="currentCity"></h2>
-                                    <li id="cityTemp"></li>
-                                    <li id="cityHumidity"></li>
-                                    <li id="cityWind"></li>
-                                    <li id="cityUV"></li> </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+                <div class="colDiv col-md-7 col-lg-8">
 
+
+
+                </div>
+            </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/js/script.js" src="assets/images/weather_dashboard.jpg"></script>
